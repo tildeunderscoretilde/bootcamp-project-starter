@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Date;
 
 @Repository
-public interface ClosingRepository extends JpaRepository<Stocks, Long>, QuerydslPredicateExecutor<Stocks> {
+public interface ClosingRepository extends JpaRepository<ClosingPrice, Long>, QuerydslPredicateExecutor<ClosingPrice> {
     ClosingPrice findOneByCode(String code);
     ClosingPrice findOneByDate(Date date);
 }
